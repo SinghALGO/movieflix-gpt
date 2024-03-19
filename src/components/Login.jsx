@@ -30,15 +30,16 @@ const Login = () => {
   });
     }
     else{
-      signInWithEmailAndPassword(auth, email, password)
+      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
     
     const user = userCredential.user;
-    
+    console.log(user);
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    setErrorMessage(errorCode+" "+errorMessage);
   });
 
     }
