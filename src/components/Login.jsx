@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react';
 import Header from './Header';
 import {checkValidData} from "../utils/validate";
-import { createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile} from "firebase/auth";
 import {auth} from "../utils/firebase";
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import {login} from '../utils/userSlice';
 const Login = () => {
   const navigate = useNavigate();
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const dispatch = useDispatch();
   const toggleSignInForm = () => {
     setIsSignIn(!isSignIn);
   }
@@ -23,8 +26,17 @@ const Login = () => {
       createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
         const user = userCredential.user;
+        updateProfile(user, {
+  displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+}).then(() => {
+    const {uid,email,displayName,photoURL} = auth.currentUser;
+    dispatch(login({uid,email,displayName, photoURL}));
+   navigate("/browse");
+}).catch((error) => {
+  setErrorMessage(error.message);
+});
         console.log(user);
-        navigate("/browse");
+       
   })
   .catch((error) => {
     const errorCode = error.code;
