@@ -4,10 +4,8 @@ import {checkValidData} from "../utils/validate";
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updateProfile} from "firebase/auth";
 import {auth} from "../utils/firebase";
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import {login} from '../utils/userSlice';
 const Login = () => {
-  const navigate = useNavigate();
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const dispatch = useDispatch();
@@ -47,7 +45,6 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       .then((userCredential) => {
     
-    const user = userCredential.user;
    
   })
   .catch((error) => {
