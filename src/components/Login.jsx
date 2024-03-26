@@ -20,7 +20,7 @@ const Login = () => {
   const handleButtonClick = () => {
     setErrorMessage(null);
     const validation = checkValidData(email.current.value, password.current.value, name.current);
-    setErrorMessage(validation);
+    setErrorMessage(validation); 
     if(validation) return;
     if(!isSignIn){
       createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
@@ -31,11 +31,10 @@ const Login = () => {
 }).then(() => {
     const {uid,email,displayName,photoURL} = auth.currentUser;
     dispatch(login({uid,email,displayName, photoURL}));
-   navigate("/browse");
 }).catch((error) => {
   setErrorMessage(error.message);
 });
-        console.log(user);
+       
        
   })
   .catch((error) => {
@@ -49,8 +48,7 @@ const Login = () => {
       .then((userCredential) => {
     
     const user = userCredential.user;
-    console.log(user);
-    navigate("/browse");
+   
   })
   .catch((error) => {
     const errorCode = error.code;
