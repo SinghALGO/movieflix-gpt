@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updatePro
 import {auth} from "../utils/firebase";
 import { useDispatch } from 'react-redux';
 import {login} from '../utils/userSlice';
+import { USERLOGO } from '../utils/constants';
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -25,7 +26,7 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
-  displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+  displayName: name.current.value, photoURL: USERLOGO
 }).then(() => {
     const {uid,email,displayName,photoURL} = auth.currentUser;
     dispatch(login({uid,email,displayName, photoURL}));
