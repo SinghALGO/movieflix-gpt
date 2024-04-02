@@ -12,6 +12,9 @@ const Header = () => {
   const user = useSelector(store => store.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const handleGptClick = () => {
+    
+  };
   useEffect(() => {
    const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -34,7 +37,8 @@ const Header = () => {
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
      
       <img className="w-44" src={LOGO} alt="logo"/>
-      {user.user &&(<div className="flex p-2"><img alt="usericon" className="w-12 h-12" src={user.user.photoURL}/>
+      {user.user &&(<div className="flex p-2">
+        <button onClick={handleGptClick} className="py-2 px-6 mx-4 mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">GPT</button><img alt="usericon" className="w-12 h-12" src={user.user.photoURL}/>
       <button onClick={handleSignout}className="font-bold text-white mb-5 ml-4 rounded-lg bg-red-600 px-4 py-1 pb-2 hover:bg-red-400">Sign Out</button></div>)}
     </div>
   )
