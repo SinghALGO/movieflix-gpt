@@ -2,11 +2,12 @@ import React from 'react'
 import MovieCard from './MovieCard';
 const MovieList = ({title, movies}) => {
   return (
-    <div>
-     <div>
-      <h1>{title}</h1>
-      <div>
-        {movies.map(movie => <MovieCard key={movie.id} posterPath={movie.poster_path}/>)}
+    <div className="px-9  ">
+       <h1 className="text-3xl py-4 text-white">{title}</h1>
+     <div className="flex overflow-x-scroll">
+     
+      <div className="flex">
+        {movies?.map(movie => <MovieCard key={movie.id} posterPath={movie.poster_path}/>)}
         
       </div>
      </div>
