@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { BACKGROUND_IMG } from '../utils/constants';
 const GptSearchBar = () => {
   return (
-         <div className="flex justify-center items-center h-screen bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/23e51548-38c3-495f-897d-cf0a2eb11171/CA-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg')]">
-      <form className="w-1/2 max-w-lg">
+         <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
+      <form className="w-5/12 max-w-lg">
         <div className="flex items-center bg-white rounded-full shadow-xl">
           <input
             className="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"

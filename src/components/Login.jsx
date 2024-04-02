@@ -5,7 +5,8 @@ import { createUserWithEmailAndPassword , signInWithEmailAndPassword , updatePro
 import {auth} from "../utils/firebase";
 import { useDispatch } from 'react-redux';
 import {login} from '../utils/userSlice';
-import { USERLOGO } from '../utils/constants';
+import { USERLOGO } from '../utils/constants'; 
+import { BACKGROUND_IMG } from '../utils/constants';
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -59,7 +60,7 @@ const Login = () => {
   return (
     <div><Header/>
     <div className="absolute h-screen">
-    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/23e51548-38c3-495f-897d-cf0a2eb11171/CA-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background image tiles"/>
+    <img src={BACKGROUND_IMG} alt="background image tiles"/>
     </div>
     <form onSubmit={(e) => e.preventDefault()} className="absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
       <h1 className="font-bold text-3xl py-4">{isSignIn ? "Sign In": "Sign Up"}</h1>
