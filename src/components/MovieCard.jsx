@@ -1,8 +1,10 @@
 import React from 'react'
-
-const MovieCard = () => {
+import { IMAGE_CDN } from '../utils/constants';
+const MovieCard = ({posterPath}) => {
   return (
-    <div>MovieCard</div>
+    <div className="w-48">
+      <img src={IMAGE_CDN+posterPath} alt="Movie Card"/>
+    </div>
   )
 }
 
