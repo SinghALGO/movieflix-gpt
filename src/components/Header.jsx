@@ -17,7 +17,9 @@ const Header = () => {
   const handleGptClick = () => {
     dispatch(toggleGptSearch());
   };
-  
+  const handleLanguageChange = (e) => {
+    console.log(e.target.value);
+  }
   useEffect(() => {
    const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -41,8 +43,8 @@ const Header = () => {
      
       <img className="w-44" src={LOGO} alt="logo"/>
       {user.user &&(<div className="flex p-2">
-        <select className="p-2 m-2 mb-5 bg-gray-900 text-white rounded-lg">
-          {supportedLanguages.map((lang) => <option value={lang.id}>{lang.name}</option>)}
+        <select className="p-2 m-2 mb-5 bg-gray-900 text-white rounded-lg" onChange={handleLanguageChange}>
+          {supportedLanguages.map((lang) => <option key={lang.id} value={lang.id}>{lang.name}</option>)}
           
         </select>
         <button onClick={handleGptClick} className="py-2 px-6 mx-4 mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">GPT Search</button><img alt="usericon" className="w-12 h-12" src={user.user.photoURL}/>

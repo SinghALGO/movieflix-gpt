@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { supportedLanguages } from "./constants";
 const configSlice = createSlice({
   name: "config",
   initialState: {
