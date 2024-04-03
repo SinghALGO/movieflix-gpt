@@ -1,6 +1,10 @@
 import React from 'react'
 import { BACKGROUND_IMG } from '../utils/constants';
+import { lang } from '../utils/languageConstants';
+import { useSelector } from 'react-redux';
 const GptSearchBar = () => {
+  const langId = useSelector(store => store.config.language);
+  if(!langId)return;
   return (
          <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
       <form className="w-5/12 max-w-lg">
@@ -8,7 +12,7 @@ const GptSearchBar = () => {
           <input
             className="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"
             type="text"
-            placeholder="What should I watch today?"
+            placeholder={lang[langId].TextGPT}
           />
           <div className="p-4">
             <button className="bg-red-600 text-white rounded-full p-2 hover:bg-red-700 focus:outline-none w-12 h-12 flex items-center justify-center">
