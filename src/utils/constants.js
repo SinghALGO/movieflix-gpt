@@ -9,3 +9,4 @@ export const API_OPTIONS = {
 };
 export const IMAGE_CDN = "https://image.tmdb.org/t/p/w780";
 export const BACKGROUND_IMG = "https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/23e51548-38c3-495f-897d-cf0a2eb11171/CA-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+export const supportedLanguages = [{id: "en", name: "English"}, {id: "fr", name: "French"}];
