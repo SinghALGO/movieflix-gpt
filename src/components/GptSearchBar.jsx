@@ -13,7 +13,10 @@ const GptSearchBar = () => {
     messages: [{ role: 'user', content: gptQuery }],
     model: 'gpt-3.5-turbo',
   });
-    console.log(gptResults.choices[0].content);
+  if(!gptResults.choices){
+    // error handling
+  }
+    const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
   };
   if(!langId)return;
   return (
