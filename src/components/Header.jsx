@@ -52,7 +52,7 @@ const Header = () => {
           {supportedLanguages.map((lang) => <option key={lang.id} value={lang.id}>{lang.name}</option>)}
           
         </select>
-        <button onClick={handleGptClick} className="py-2 px-6 mx-4 mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">{gptToggle?"Home":lang[langId].buttonGpt}</button><img alt="usericon" className="w-12 h-12" src={user.user.photoURL}/>
+        <button onClick={handleGptClick} className="py-2 px-6 mx-4 mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">{gptToggle?lang[langId].buttonHome:lang[langId].buttonGpt}</button><img alt="usericon" className="w-12 h-12" src={user.user.photoURL}/>
       <button onClick={handleSignout}className="font-bold text-white mb-5 ml-4 rounded-lg bg-red-600 px-4 py-1 pb-2 hover:bg-red-400">{lang[langId].buttonSignOut}</button>
        
       </div>)

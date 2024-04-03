@@ -8,6 +8,7 @@ export const lang = {
     buttonMoreInfo: "More Info",
     buttonSignOut: "Sign Out",
     buttonGpt: "GPT Search",
+    buttonHome: "Home",
     TextGPT: "What should I watch today?"
   },
   fr: {
@@ -19,6 +20,7 @@ export const lang = {
     buttonMoreInfo: "Plus d'infos",
     buttonSignOut: "Déconnexion",
     buttonGpt: "Recherche GPT",
+    buttonHome: "Accueil",
     TextGPT: "Que devrais-je regarder aujourd'hui ?"
   }
 };
