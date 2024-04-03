@@ -8,7 +8,7 @@ const GptSearchBar = () => {
   return (
          <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
       <form className="w-5/12 max-w-lg">
-        <div className="flex items-center bg-white rounded-full shadow-xl">
+        <div className="flex items-center bg-white rounded-full shadow-xl border-2 border-solid border-red-600">
           <input
             className="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none"
             type="text"
