@@ -1,4 +1,5 @@
 import React from 'react'
+import GptMovieSuggestion from "./GptMovieSuggestion";
 import { useRef } from 'react';
 import { API_OPTIONS, BACKGROUND_IMG } from '../utils/constants';
 import { lang } from '../utils/languageConstants';
@@ -32,7 +33,7 @@ const GptSearchBar = () => {
   };
   if(!langId)return;
   return (
-         <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
+         <div className="flex flex-col justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
       <form className="w-5/12 max-w-lg" onSubmit={e=>e.preventDefault()}>
         <div className="flex items-center bg-white rounded-full shadow-xl border-2 border-solid border-red-600">
           <input
@@ -61,7 +62,9 @@ const GptSearchBar = () => {
           </div>
         </div>
       </form>
+      <GptMovieSuggestion/>
     </div>
+    
   )
 }
 

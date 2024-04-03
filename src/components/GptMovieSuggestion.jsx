@@ -5,9 +5,12 @@ const GptMovieSuggestion = () => {
   const {movieResults, movieNames} = gpt;
   if(!movieNames) return;
   return (
-    <div className="p-4 m-4 bg-black text-white  ">
-      Hi anahat
-      {movieNames}
+    <div className="">
+     <div className=" block p-4 m-4 bg-black text-white flex ">
+      {movieNames.map((movieName, index) => (
+        <p key={index}>{movieName}</p>
+      ))}
+    </div>
     </div>
   )
 }
