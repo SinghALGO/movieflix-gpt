@@ -11,6 +11,7 @@ import { toggleGptSearch } from '../utils/gptSlice';
 import { supportedLanguages } from '../utils/constants';
 import { changeLanguage } from '../utils/configSlice';
 import {lang} from '../utils/languageConstants';
+import { addGptMovie } from '../utils/gptSlice';
 
 const Header = () => {
   const user = useSelector(store => store.user);
@@ -20,6 +21,7 @@ const Header = () => {
   const gptToggle = useSelector((store) => store.gpt.gptSearch);
   const handleGptClick = () => {
     dispatch(toggleGptSearch());
+    dispatch(addGptMovie({movieNames:null, movieResults:null}));
   };
   const handleLanguageChange = (e) => {
    dispatch(changeLanguage(e.target.value));
