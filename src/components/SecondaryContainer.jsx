@@ -9,6 +9,7 @@ const SecondaryContainer = () => {
   const topRatedMovies = useSelector((store) => store.movie.topRatedMovies);
   const upcomingMovies = useSelector((store) => store.movie.upcomingMovies);
   if(!langId)return;
+  console.log(movies);
   return (
     <div className="bg-black">
       <div className="pl-10 relative -top-56">

@@ -21,7 +21,7 @@ const GptMovieSuggestion = () => {
 
   return  (
     <div
-      className="flex flex-col items-center h-96 p-4 m-4 bg-black text-white bg-opacity-70 overflow-hidden rounded-3xl relative"
+      className="flex flex-col items-center h-96 p-4 m-4 bg-black text-white bg-opacity-90 overflow-hidden rounded-3xl relative"
       
       style={{ width: '85%' }} 
     >
