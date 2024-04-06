@@ -12,7 +12,7 @@ const SecondaryContainer = () => {
   console.log(movies);
   return (
     <div className="bg-black">
-      <div className="pl-10 relative -top-56">
+      <div className="pl-8 relative mt-0 md:-top-56">
       <MovieList title={lang[langId].title1} movies={movies}/>
       <MovieList title={lang[langId].title2} movies={popularMovies}/>
       <MovieList title={lang[langId].title3} movies={topRatedMovies}/>
