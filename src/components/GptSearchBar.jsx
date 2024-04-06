@@ -35,7 +35,7 @@ const GptSearchBar = () => {
   if(!langId)return;
   return (
          <div className="flex flex-col justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}>
-      <form className="w-5/12 max-w-lg" onSubmit={e=>e.preventDefault()}>
+      <form className="w-12/12 max-w-lg md:w-6/12" onSubmit={e=>e.preventDefault()}>
         <div className="flex items-center bg-white rounded-full shadow-xl border-2 border-solid border-red-600">
           <input
           ref={searchText}
