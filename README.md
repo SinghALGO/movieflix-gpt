@@ -1,14 +1,14 @@
 # MovieFlixGPT - Your Ultimate Movie Companion!
 
-![Movieflix-GPT](./src/assets/MadflixGPT.png)
+![Movieflix-GPT](https://github.com/SinghALGO/movieflix-gpt/blob/main/src/assets/Screenshotgpt.png?raw=true)
 
 ## Overview
 
-MadflixGPT is a cutting-edge movie information platform powered by advanced AI technology. With MadflixGPT, you can explore movies, discover new favorites, and get personalized movie recommendations based on any query you provide, thanks to the powerful OpenAI API integration.
+MpvieflixGPT is a cutting-edge movie information platform powered by advanced AI technology. With MovieflixGPT, you can explore movies, discover new favorites, and get personalized movie recommendations based on any query you provide, thanks to the powerful OpenAI API integration.
 
 ## Live Project
 
-Explore MadflixGPT live: [MadflixGPT Live](https://madflixgpt.netlify.app/)
+Explore MovieflixGPT live: [MovieflixGPT Live]()
 
 ## Features
 
@@ -32,20 +32,20 @@ Explore MadflixGPT live: [MadflixGPT Live](https://madflixgpt.netlify.app/)
 ## Test Credentials
 
 - Email: test@gmail.com
-- Password: Testuser123
+- Password: Testuser@123
 
 ## Getting Started
 
-To get started with MadflixGPT, follow these steps:
+To get started with MovieflixGPT, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your_username/MadflixGPT.git`
+1. Clone the repository: `git clone https://github.com/your_username/movieflix-gpt.git`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm start`
-4. Explore MadflixGPT in your browser at `http://localhost:3000`
+4. Explore MovieflixGPT in your browser at `http://localhost:3000`
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to MadflixGPT, please follow these guidelines:
+Contributions are welcome! If you'd like to contribute to MovieflixGPT, please follow these guidelines:
 - Fork the repository
 - Create a new branch: `git checkout -b feature/new-feature`
 - Make your changes and commit them: `git commit -am 'Add new feature'`
