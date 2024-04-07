@@ -5,11 +5,11 @@ const VideoTitle = ({title, overview}) => {
   const langId = useSelector(store => store.config.language);
   if(!langId)return;
   return (
-    <div className="w-screen aspect-video pt-[15%] px-24 absolute text-white bg-gradient-to-r from-black"><h1 className="text-6xl font-bold">{title}</h1>
-    <p className="hidden md:inline-block py-6 text-lg w-2/4">{overview}</p>
+    <div className="w-screen aspect-video pt-[25%] md:pt-[15%] px-12 md:px-24 absolute text-white bg-gradient-to-r from-black"><h1 className="text-2xl md:text-6xl font-bold">{title}</h1>
+    <p className="hidden md:block py-6 text-lg w-2/4">{overview}</p>
     <div className="">
-      <button className="bg-white text-black p-4 px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonPlay}</button>
-      <button className="mx-2 bg-gray-500 text-white p-4 px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonMoreInfo}</button>
+      {/* <button className="bg-white text-black p-4 px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonPlay}</button> */}
+      <button className="mx-0 my-5 bg-white text-black px-6 py-2 md:py-4 md:px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonMoreInfo}</button>
     </div>
     </div>
   )
