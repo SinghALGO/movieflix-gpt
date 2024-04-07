@@ -26,7 +26,7 @@ const MovieList = ({title, movies}) => {
         style={{ cursor: 'grab' }}>
      
       <div className="flex">
-        {movies?.map(movie => <MovieCard key={movie.id} posterPath={movie.poster_path}/>)}
+        {movies?.map(movie => <MovieCard key={movie.id} movieId={movie.id} posterPath={movie.poster_path}/>)}
         
       </div>
      </div>
