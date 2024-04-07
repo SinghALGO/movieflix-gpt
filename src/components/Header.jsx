@@ -69,7 +69,7 @@ const Header = () => {
           <select className="p-2 m-2 mb-5 bg-gray-900 text-white rounded-lg" onChange={handleLanguageChange}>
             {supportedLanguages.map((language) => <option  key={language.id} value={language.id}>{language.name}</option>)}
           </select>
-          <button onClick={handleGptClick} className=" p-0 md:py-2 md:px-6 md:mx-4 md:mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">{gptToggle ? lang[langId].buttonHome : lang[langId].buttonGpt}</button>
+          <button onClick={handleGptClick} className=" px-3 py-0 md:py-2 md:px-6 md:mx-4 md:mb-5 text-white font-bold bg-purple-800 rounded-lg hover:bg-purple-600">{gptToggle ? lang[langId].buttonHome : lang[langId].buttonGpt}</button>
           <img alt="usericon" className="w-12 h-12 mb-4" src={user.user?.photoURL} />
           <button onClick={handleSignout} className="font-bold text-white mb-5 ml-4 rounded-lg bg-red-600 px-4 py-1 pb-2 hover:bg-red-400">{lang[langId].buttonSignOut}</button>
         </div>
