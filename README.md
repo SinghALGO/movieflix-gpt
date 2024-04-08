@@ -4,7 +4,7 @@
 
 ## Overview
 
-MpvieflixGPT is a cutting-edge movie information platform powered by advanced AI technology. With MovieflixGPT, you can explore movies, discover new favorites, and get personalized movie recommendations based on any query you provide, thanks to the powerful OpenAI API integration.
+MovieflixGPT is a cutting-edge movie information platform powered by advanced AI technology. With MovieflixGPT, you can explore movies, discover new favorites, and get personalized movie recommendations based on any query you provide, thanks to the powerful OpenAI API integration.
 
 ## Live Project
 
