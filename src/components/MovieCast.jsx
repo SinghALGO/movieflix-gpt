@@ -1,11 +1,11 @@
 import {useRef} from "react";
 import useCast from "../hooks/useCast";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { IMG_CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const MovieCast = ({ id }) => {
-  const dispatch = useDispatch();
+ 
   useCast(id);
   const castInfo = useSelector((store) => store.movie.castInfo);
   const scrollContainerRef = useRef(null);
