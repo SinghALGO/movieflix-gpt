@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
 import MovieCard from './MovieCard';
+import { Link } from 'react-router-dom';
 const MovieList = ({title, movies}) => {
    const scrollContainerRef = useRef(null);
    const handleMouseMove = (event) => {
@@ -26,8 +27,10 @@ const MovieList = ({title, movies}) => {
         style={{ cursor: 'grab' }}>
      
       <div className="flex">
-        {movies?.map(movie => <MovieCard key={movie.id} movieId={movie.id} posterPath={movie.poster_path}/>)}
-        
+        {movies?.map(movie => (
+          <Link to={"/movieinfo/"+movie?.id}>
+        <MovieCard key={movie.id} posterPath={movie.poster_path}/>
+        </Link>))}
       </div>
      </div>
      
