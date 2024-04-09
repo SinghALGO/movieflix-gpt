@@ -69,7 +69,7 @@ const Header = () => {
           
         </div>
         {user.user &&   <div className={`md:flex md:items-center justify-between space-x-4 ${showMenu ? 'flex' : 'hidden'}` }>
-         {!showMenu && <p className="text-white font-bold text-xl mt-3 md:mb-6 ">Welcome, {user.user?.displayName}</p>} 
+         {!showMenu && <p className="text-white font-bold text-xl mt-3 md:mb-6 ">{lang[langId].welcome},{" "}{user.user?.displayName}</p>} 
 
           <select className="p-2 m-2 mb-5 bg-gray-900 text-white rounded-lg" onChange={handleLanguageChange}>
             {supportedLanguages.map((language) => <option  key={language.id} value={language.id}>{language.name}</option>)}
