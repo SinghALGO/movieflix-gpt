@@ -57,7 +57,9 @@ const Header = () => {
     <div className="absolute  w-screen px-0 py-2 bg-gradient-to-b from-black z-10 flex flex-col items-center md:flex-row justify-between">
      <div className="w-screen  px-8 py-2 md:flex md:items-center justify-between md:pr-10">
         <div className="flex items-center justify-between">
-          <img onClick={e =>  dispatch(toggleGptSearch())} className="w-44 cursor-pointer" src={LOGO} alt="logo" />
+          <Link to="/">
+          <img className="w-44 cursor-pointer" src={LOGO} alt="logo" />
+          </Link>
          {user.user && <div className="md:hidden">
             <button className="text-white" onClick={() => setShowMenu(!showMenu)}>
               <HiMenuAlt3 className="w-8 h-8" />

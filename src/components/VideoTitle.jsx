@@ -1,7 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { lang } from '../utils/languageConstants';
-const VideoTitle = ({title, overview}) => {
+import { Link } from 'react-router-dom';
+const VideoTitle = ({title, overview, id}) => {
   const langId = useSelector(store => store.config.language);
   if(!langId)return;
   return (
@@ -9,7 +10,9 @@ const VideoTitle = ({title, overview}) => {
     <p className="hidden md:block py-6 text-lg w-2/4">{overview}</p>
     <div className="">
       {/* <button className="bg-white text-black p-4 px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonPlay}</button> */}
+       <Link to={"/movieinfo/" + id}>
       <button className="mx-0 my-5 bg-white text-black px-6 py-2 md:py-4 md:px-12 text-xl  rounded-lg hover:bg-opacity-70">{lang[langId].buttonMoreInfo}</button>
+    </Link>
     </div>
     </div>
   )

@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import { useParams } from "react-router-dom";
 import useMovieInfo from "../hooks/useMovieInfo";
 import MovieInfoContainer from "./MovieInfoContainer";
+import MovieCast from "./MovieCast";
 import Header from "./Header";
 import { IMAGE_CDN } from "../utils/constants";
 import Loader from "./Loader";
@@ -21,6 +22,7 @@ const MovieInfo = () => {
         <img className="w-full h-[110vh] md:h-auto object-cover mx-auto brightness-[.3]" src={IMAGE_CDN + info.backdrop_path} alt="moviebg" />
       </div>
        <MovieInfoContainer info={info}/>
+       <MovieCast id={info?.id}/>
     </div>
   );
 };
