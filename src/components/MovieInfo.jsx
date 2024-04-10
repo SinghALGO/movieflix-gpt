@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import useMovieInfo from "../hooks/useMovieInfo";
 import MovieInfoContainer from "./MovieInfoContainer";
 import MovieCast from "./MovieCast";
+import MovieVideos from "./MovieVideos";
 import Header from "./Header";
 import { IMAGE_CDN } from "../utils/constants";
 import Loader from "./Loader";
@@ -23,6 +24,7 @@ const MovieInfo = () => {
       </div>
        <MovieInfoContainer info={info}/>
        <MovieCast id={info?.id}/>
+        <MovieVideos id={info?.id} />
     </div>
   );
 };
