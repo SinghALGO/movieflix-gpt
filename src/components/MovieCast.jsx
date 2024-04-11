@@ -41,7 +41,7 @@ const MovieCast = ({ id }) => {
           <div className="flex flex-row gap-5">
             {castInfo?.map((cast) =>
               cast?.profile_path ? (
-                <Link to={"/castmovie/"+cast?.id}  state={{ actorName: cast?.name }}><div
+                <div
                   key={cast.id}
                   className="flex justify-between items-center rounded-lg  flex-col bg-zinc-700 max-h-44 md:max-h-64"
                 >
@@ -59,7 +59,7 @@ const MovieCast = ({ id }) => {
                     </span>
                     <span className="text-gray-300 font-light xl:text-sm md:text-xs sm:text-xs text-[10px] lg:text-sm text-center">{cast?.character}</span>
                   </div>
-                </div></Link>
+                </div>
               ) : null
             )}
           </div>
